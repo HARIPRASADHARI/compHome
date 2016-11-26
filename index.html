@@ -2,32 +2,131 @@
 <html>
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css">
+     <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    
+    
+    
     
 
 </head>
     <body ng-app="CompApp">
- 
-    <div ng-controller="InputController">
-
-        <md-toolbar class="md-warn">
-            <div class="md-toolbar-tools">
-                <h2 class="md-flex">Toolbar</h2>
+    <!-- <div ng-controller="formController" layout="column" layout-align="center center" ng-cloak>
+      <md-toolbar class="md-primary md-raised">
+          <div class="md-toolbar-tools">
+            <h3 class="md-headline md-flex">Restrict form fields</h3>
+          </div>
+      </md-toolbar>
+      <md-content class="md-whiteframe-4dp" layout-padding layout-margin >
+      <form name="projectForm">
+        <md-input-container class="md-block">
+          <label>Client Email</label>
+            <input required type="email" name="clientEmail" ng-model="project.clientEmail"
+                 minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+            <div ng-messages="projectForm.clientEmail.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Your email must be between 10 and 100 characters long and look like an e-mail address.
             </div>
-        </md-toolbar> 
-        <md-button class="md-primary md-raised md-hue-1">Click me</md-button>  
-         <md-button class="md-primary md-raised md-hue-2">Click me</md-button>  
-          <md-button class="md-primary md-raised md-hue-3">Click me</md-button>
-          <md-button class="md-primary md-raised">Click me</md-button>
-          <md-button class="md-primary md-raised">Click me</md-button>       
-    </div>
- 
-    <script src="./node_modules/angular/angular.js"></script> 
-    <script src="./node_modules/angular-aria/angular-aria.js"></script> 
-    <script src="./node_modules/angular-animate/angular-animate.js"></script> 
-    <script src="./node_modules/angular-material/angular-material.js"></script> 
-   <script type="text/javascript" src="js/app.js"></script>
-   <script type="text/javascript" src="js/controller/controls.js"></script> 
+          </div>
+        </md-input-container>
+        <div>
+          <md-button type="submit" class="md-primary md-raised">Submit</md-button>
+        </div>
+      </form>
+      </md-content>
+    </div> -->
+    <div  layout="column" layout-fill    ng-controller="formController">
+      <md-toolbar class="md-primary md-raised">
+        <div class="md-toolbar-tools">
+            <h3 class="md-headline md-flex">Restrict form fields</h3>
+          </div>
+      </md-toolbar>
+      <md-content layout="row" layout-align="center center">
+        
+          <md-content flex="65" layout="column" md-whiteframe="3" layout-margin layout-padding>
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>First name</label>
+              <input ng-model="user.firstName">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Last name</label>
+              <input ng-model="theMax">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Email Id</label>
+              <input ng-model="user.firstName">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Mobile Number</label>
+              <input ng-model="theMax">
+            </md-input-container>
+          </div>
+          <div layout="row"> 
+          <md-input-container class="md-block" flex>
+              <label>Address</label>
+              <input  ng-model="user.firstName">
+            </md-input-container> 
+          </div>  
+          <div layout="row" layout-align="end end">
+            <md-button class="md-raised md-primary md-hue-2">Submit</md-button>
+          </div>
+          </md-content>
+        
+        
+          <md-content flex md-whiteframe="3" layout-margin ng-cloak>
+            <p>Hai</p>
+            <!-- <md-fab-speed-dial md-direction="up" class="md-fling">
+              <md-fab-tigger>
+                <md-button aria-label="share">
+                <md-icon class="material-icons md-light md-48">share</md-icon> 
+                </md-button>
+              </md-fab-tigger>
+              <md-fab-actions>
+                <md-button aria-label="link">
+                  <md-icon class="material-icons md-light md-48">email</md-icon> 
+                </md-button>
+              </md-fab-actions>    
+            </md-fab-speed-dial> -->
+  <md-fab-speed-dial md-open="false" style="position:fixed;bottom:10px;right:10px;" md-direction="up" class="md-fling">
+        <md-fab-trigger >
+            <md-button aria-label="Add..." class="md-fab md-raised md-primary">
+            <md-icon class="material-icons md-light md-48">menu</md-icon> 
+            </md-button>
+        </md-fab-trigger>
+
+  <md-fab-actions>
+    <md-button aria-label="Add User" class="md-fab md-raised md-mini md-accent">
+      <md-icon class="material-icons md-light md-48">share</md-icon> 
+    </md-button>
+
+    <md-button aria-label="Add Group" class="md-fab md-raised md-mini md-accent">
+      <md-icon class="material-icons md-light md-48">mail_outline</md-icon> 
+    </md-button>
+  </md-fab-actions>
+</md-fab-speed-dial>
+
+  
+          </md-content>
+      </md-content>
+      
+           
+
+
+    </div>    
+
+    <script src="node_modules/angular/angular.js"></script> 
+    <script src="node_modules/angular-aria/angular-aria.js"></script> 
+    <script src="node_modules/angular-animate/angular-animate.js"></script> 
+    <script src="node_modules/angular-messages/angular-messages.js"></script> 
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/app.js"></script>
+   
 
  
 </body>

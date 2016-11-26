@@ -20,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/HARIPRASADHARI/compHome/issues"
   },
-  "homepage": "https://github.com/HARIPRASADHARI/compHome#readme"
+  "homepage": "https://github.com/HARIPRASADHARI/compHome#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.1",
+    "angular-messages": "^1.5.8",
+    "async": "^2.1.2",
+    "jquery": "^3.1.1",
+    "material-design-icons": "^3.0.1",
+    "phantomjs": "^2.1.7"
+  }
 }
